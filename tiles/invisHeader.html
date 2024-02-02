@@ -58,12 +58,12 @@
 
     .desktopquicklinks {  
         display: grid;
-        grid-template-columns: 1fr 1fr 1.3fr;
+        grid-template-columns: 1fr 1fr 1fr 1.3fr;
         grid-template-rows: 1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
-            "desktopaccount desktoplogout desktopbooking";
+            "desktopaccount desktoplogout desktopathletic desktopbooking";
         grid-area: desktopquicklinks;
     }
 
@@ -75,11 +75,15 @@
         grid-area: desktoplogout; 
     }
 
+    .desktopathletic { 
+        grid-area: desktopathletic;
+    }
+
     .desktopbooking { 
         grid-area: desktopbooking;
     }
 
-    .headerlink a{
+    .desktopbooking a{
         color:black;
         text-decoration: none;
         padding-left: 20px;
@@ -89,6 +93,11 @@
         border: 2px solid rgba(222,174,56,1);
         border-radius: 20px;
         transition: color 0.2s ease-in-out;
+    }
+
+    .headerlink a{
+        color: black;
+        text-decoration: none;
     }
 
     .headerlink {
@@ -117,7 +126,8 @@
         <div class="desktopquicklinks">
             <div class="desktopaccount headerlink"><a>MY INFO</a></div>
             <div class="desktoplogout headerlink"><a>LOG OUT</a></div>
-            <div class="desktopbooking headerlink"><a>BOOK NOW</a></div>
+            <div class="desktoplogout headerlink"><a>LOG OUT</a></div>
+            <div class="desktopbooking"><a>BOOK NOW</a></div>
         </div>
     </div>
 </section>
