@@ -3,8 +3,33 @@
         width: 100%;
         height: 25vh;
     }
+
+    .desktopheader{
+        display: none;
+    }
+
+    .mobileheader{
+        display: none;
+    }
+
+    @media (min-width: 1000px) {
+        .desktopheader{
+            display: block;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .mobileheader{
+            display: block;
+        }
+    }
 </style>
 
 <section id="invisHeader">
-    
+    <div class="desktopheader">
+
+    </div>
+    <div class="mobileheader">
+
+    </div>
 </section>
