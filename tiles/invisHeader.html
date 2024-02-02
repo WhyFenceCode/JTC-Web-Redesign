@@ -69,54 +69,17 @@
 
     .desktopaccount { 
         grid-area: desktopaccount;
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-    }
-    
-    .desktopaccount a{
-        color:black;
-        text-decoration: none;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        transition: color 0.2s ease-in-out;
-    }
-
-    .desktopaccount a:hover{
-        color: rgba(222,174,56,1);;
     }
 
     .desktoplogout { 
-        grid-area: desktoplogout;
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-    }
-
-    .desktoplogout a{
-        color:black;
-        text-decoration: none;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        transition: color 0.2s ease-in-out;
-    }
-
-    .desktoplogout a:hover{
-        color: rgba(222,174,56,1);;
+        grid-area: desktoplogout; 
     }
 
     .desktopbooking { 
         grid-area: desktopbooking;
-        display: flex;
-        justify-content: center;
-        align-items: center; 
     }
 
-    .desktopbooking a{
+    .headerlink a{
         color:black;
         text-decoration: none;
         padding-left: 20px;
@@ -128,7 +91,13 @@
         transition: color 0.2s ease-in-out;
     }
 
-    .desktopbooking a:hover{
+    .headerlink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headerlink a:hover{
         color: rgba(222,174,56,1);;
     }
 </style>
@@ -146,9 +115,9 @@
             </div>
         </div>
         <div class="desktopquicklinks">
-            <div class="desktopaccount"><a>MY INFO</a></div>
-            <div class="desktoplogout"><a>LOG OUT</a></div>
-            <div class="desktopbooking"><a>BOOK NOW</a></div>
+            <div class="desktopaccount headerlink"><a>MY INFO</a></div>
+            <div class="desktoplogout headerlink"><a>LOG OUT</a></div>
+            <div class="desktopbooking headerlink"><a>BOOK NOW</a></div>
         </div>
     </div>
 </section>
