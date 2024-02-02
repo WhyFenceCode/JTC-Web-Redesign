@@ -15,6 +15,7 @@
        align-items: center;
        position: relative;
        text-decoration: none;
+       transition: color 0.2s ease-in-out;
     }
      
     .grid-item h2 {
@@ -23,7 +24,7 @@
     }
      
     .grid-item img {
-       display: none;
+       display: block;
        position: absolute;
        top: 50%;
        left: 50%;
@@ -31,10 +32,12 @@
        max-height: 90%;
        max-width: 90%;
        object-fit: cover;
+       opacity: 0;
+       transition: opacity 0.2s ease-in-out;
     }
      
     .grid-item:hover img {
-       display: block;
+       opacity: 1;
     }
 
     .grid-item:hover {
