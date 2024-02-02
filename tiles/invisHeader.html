@@ -14,7 +14,7 @@
         height: 12vh;
         display: grid;
         grid-template-columns: 1fr 0.6fr;
-        grid-template-rows: 0.1fr 1fr;
+        grid-template-rows: 0.3fr 1fr;
         grid-auto-columns: 1fr;
         gap: 0px 5%;
         grid-auto-flow: row;
@@ -29,6 +29,7 @@
     .contact{
         grid-area: contact;
         background-color: black;
+        position: relative;
     }
 
     .desktopheader:hover {
@@ -132,11 +133,33 @@
     .headerlink a:hover{
         color: rgba(222,174,56,1);;
     }
+
+    .tellelephone{
+        position: absolute;
+        left: 5%;
+    }
+
+    .address{
+        position: absolute;
+        right: 5%;
+    }
+
+    .bannerlink a{
+        color: white;
+        text-decoration: none;
+    }
+
+    .bannerlink:hover{
+        color: rgba(222,174,56,1);
+    }
 </style>
 
 <section id="memberInvisHeader">
     <div class="desktopheader">
-        <div class="contact"></div>
+        <div class="contact bannerlink">
+            <a class="tellephone">604.224.2348</a>
+            <a class="address">3837 Point Grey Road Vancouver, BC V6R 1B3</a>
+        </div>
         <div class="desktopnav">
             <div class="desktoplogo"><a><img src="https://i.ibb.co/f8bTycW/Standard-logo-2017-horizontal-1.jpg" alt="Logo"></a></div>
             <div class="desktoplinks">
