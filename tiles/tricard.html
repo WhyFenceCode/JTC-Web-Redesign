@@ -1,0 +1,58 @@
+<style>
+    #grid-container {
+       height: 30vh;
+       width: 100%;
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       gap: 10px; /* Adjust this value to change the space between columns */
+    }
+     
+    .grid-item {
+       color:black;
+       background-color: rgb(230, 230, 230);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+       text-decoration: none; /* Remove underline from links */
+       color: inherit; /* Inherit text color from parent */
+    }
+     
+    .grid-item h2 {
+       margin: 0; /* Remove default margin from h2 */
+       z-index: 1; /* Ensure text is above the image */
+    }
+     
+    .grid-item img {
+       display: none;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       max-height: 90%;
+       max-width: 90%;
+    }
+     
+    .grid-item:hover img {
+       display: block;
+    }
+
+    .grid-item:hover {
+       color:white;
+    }
+</style>
+
+<section id="grid-container">
+    <a class="grid-item" href="#link1">
+       <h2>RAQUET REVIEW</h2>
+       <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6" alt="Image 1">
+    </a>
+    <a class="grid-item" href="#link2">
+       <h2>PROGRAMS</h2>
+       <img src="https://images.unsplash.com/photo-1601646761285-65bfa67cd7a3" alt="Image 2">
+    </a>
+    <a class="grid-item" href="#link3">
+       <h2>HOURS</h2>
+       <img src="https://images.unsplash.com/photo-1558617320-e695f0d420de" alt="Image 3">
+    </a>
+</section>
