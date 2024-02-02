@@ -59,7 +59,19 @@
 
     .desktoplogout { grid-area: desktoplogout; }
 
-    .desktopbooking { grid-area: desktopbooking; }
+    .desktopbooking { 
+        grid-area: desktopbooking;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .desktopbooking a{
+        text-decoration: none;
+        padding: 30px, 15px;
+        border-radius: 15px;
+        border-color: #deae38;
+    }
 </style>
 
 <section id="invisHeader">
@@ -71,7 +83,7 @@
         <div class="desktopquicklinks">
             <div class="desktopaccount"></div>
             <div class="desktoplogout"></div>
-            <div class="desktopbooking"></div>
+            <div class="desktopbooking"><a>Book Now</a></div>
         </div>
     </div>
 </section>
