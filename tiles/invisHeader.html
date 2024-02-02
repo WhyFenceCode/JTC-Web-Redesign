@@ -35,7 +35,26 @@
 
     .desktoplogo { grid-area: desktoplogo; }
 
-    .desktoplinks { grid-area: desktoplinks; }
+    .desktoplinks {  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "desktopdinning desktopcal desktophistory desktopcontact desktopboard";
+        grid-area: desktoplinks;
+    }
+
+    .desktopdinning { grid-area: desktopdinning; }
+  
+    .desktopcal { grid-area: desktopcal; }
+    
+    .desktophistory { grid-area: desktophistory; }
+    
+    .desktopcontact { grid-area: desktopcontact; }
+    
+    .desktopboard { grid-area: desktopboard; }
 
     .desktopquicklinks {  
         display: grid;
@@ -118,7 +137,13 @@
     <div class="desktopheader">
         <div class="desktopnav">
             <div class="desktoplogo"></div>
-            <div class="desktoplinks"></div>
+            <div class="desktoplinks">
+                <div class="desktopdinning"></div>
+                <div class="desktopcal"></div>
+                <div class="desktophistory"></div>
+                <div class="desktopcontact"></div>
+                <div class="desktopboard"></div>
+            </div>
         </div>
         <div class="desktopquicklinks">
             <div class="desktopaccount"><a>MY INFO</a></div>
@@ -127,3 +152,4 @@
         </div>
     </div>
 </section>
+  
