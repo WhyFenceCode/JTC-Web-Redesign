@@ -33,7 +33,17 @@
         grid-area: desktopnav;
     }
 
-    .desktoplogo { grid-area: desktoplogo; }
+    .desktoplogo { 
+        grid-area: desktoplogo;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    .desktoplogo img{
+        height: 90%;
+        aspect-ratio: 401/55;
+    }
 
     .desktoplinks {  
         display: grid;
@@ -114,7 +124,7 @@
 <section id="invisHeader">
     <div class="desktopheader">
         <div class="desktopnav">
-            <div class="desktoplogo"></div>
+            <div class="desktoplogo"><a><img src="https://jerichotennisclub.com/getmedia/36755d15-975a-49e6-af24-ea885e8eb203/Standard_logo_-_2017_horizontal.aspx" alt="Logo"></a></div>
             <div class="desktoplinks">
                 <div class="desktopdinning headerlink"><a>DINNING</a></div>
                 <div class="desktopcal headerlink"><a>CALENDAR</a></div>
