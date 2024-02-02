@@ -4,7 +4,7 @@
        width: 100%;
        display: grid;
        grid-template-columns: repeat(3, 1fr);
-       gap: 10px; /* Adjust this value to change the space between columns */
+       gap: 0px;
     }
      
     .grid-item {
@@ -14,13 +14,12 @@
        justify-content: center;
        align-items: center;
        position: relative;
-       text-decoration: none; /* Remove underline from links */
-       color: inherit; /* Inherit text color from parent */
+       text-decoration: none;
     }
      
     .grid-item h2 {
-       margin: 0; /* Remove default margin from h2 */
-       z-index: 1; /* Ensure text is above the image */
+       margin: 0;
+       z-index: 1;
     }
      
     .grid-item img {
@@ -31,6 +30,7 @@
        transform: translate(-50%, -50%);
        max-height: 90%;
        max-width: 90%;
+       object-fit: cover;
     }
      
     .grid-item:hover img {
