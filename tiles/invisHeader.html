@@ -4,9 +4,46 @@
         height: 25vh;
     }
 
-    .desktopheader{
-        display: none;
-    }
+    .desktopheader {  display: grid;
+        grid-template-columns: 1fr 0.8fr;
+        grid-template-rows: 1fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 5%;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "desktopnav desktopquicklinks";
+        }
+
+        .desktopnav {  display: grid;
+        grid-template-columns: 0.7fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "desktoplogo desktoplinks";
+        grid-area: desktopnav;
+        }
+
+        .desktoplogo { grid-area: desktoplogo; }
+
+        .desktoplinks { grid-area: desktoplinks; }
+
+        .desktopquicklinks {  display: grid;
+        grid-template-columns: 1fr 1fr 1.3fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "desktopaccount desktoplogout desktopbooking";
+        grid-area: desktopquicklinks;
+        }
+
+        .desktopaccount { grid-area: desktopaccount; }
+
+        .desktoplogout { grid-area: desktoplogout; }
+
+        .desktopbooking { grid-area: desktopbooking; }
+
 
     .mobileheader{
         display: none;
@@ -27,8 +64,16 @@
 
 <section id="invisHeader">
     <div class="desktopheader">
-
-    </div>
+        <div class="desktopnav">
+          <div class="desktoplogo"></div>
+          <div class="desktoplinks"></div>
+        </div>
+        <div class="desktopquicklinks">
+          <div class="desktopaccount"></div>
+          <div class="desktoplogout"></div>
+          <div class="desktopbooking"></div>
+        </div>
+      </div>
     <div class="mobileheader">
 
     </div>
