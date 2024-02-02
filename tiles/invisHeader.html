@@ -19,9 +19,10 @@
         grid-auto-flow: row;
         grid-template-areas:
             "desktopnav desktopquicklinks";
-        }
+    }
 
-        .desktopnav {  display: grid;
+    .desktopnav {  
+        display: grid;
         grid-template-columns: 0.7fr 1fr;
         grid-template-rows: 1fr;
         gap: 0px 0px;
@@ -29,13 +30,14 @@
         grid-template-areas:
             "desktoplogo desktoplinks";
         grid-area: desktopnav;
-        }
+    }
 
-        .desktoplogo { grid-area: desktoplogo; }
+    .desktoplogo { grid-area: desktoplogo; }
 
-        .desktoplinks { grid-area: desktoplinks; }
+    .desktoplinks { grid-area: desktoplinks; }
 
-        .desktopquicklinks {  display: grid;
+    .desktopquicklinks {  
+        display: grid;
         grid-template-columns: 1fr 1fr 1.3fr;
         grid-template-rows: 1fr;
         gap: 0px 0px;
@@ -43,13 +45,13 @@
         grid-template-areas:
             "desktopaccount desktoplogout desktopbooking";
         grid-area: desktopquicklinks;
-        }
+    }
 
-        .desktopaccount { grid-area: desktopaccount; }
+    .desktopaccount { grid-area: desktopaccount; }
 
-        .desktoplogout { grid-area: desktoplogout; }
+    .desktoplogout { grid-area: desktoplogout; }
 
-        .desktopbooking { grid-area: desktopbooking; }
+    .desktopbooking { grid-area: desktopbooking; }
 
 
     .mobileheader{
@@ -64,7 +66,7 @@
 
     @media (max-width: 1000px) {
         .mobileheader{
-            display: block;
+            display: inherit;
         }
     }
 </style>
