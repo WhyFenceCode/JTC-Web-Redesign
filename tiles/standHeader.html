@@ -1,1 +1,144 @@
-<h1>standerd header</h1>
+<style>
+    body{
+        margin: 0px;
+    }
+    
+    #invisHeader{
+        width: 100%;
+        height: 12vh;
+    }
+
+    .desktopheader {  
+        background-color: rgba(230, 230, 230, 1);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 0.6fr;
+        grid-template-rows: 1fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 5%;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "desktopnav desktopquicklinks";
+    }
+
+    .desktopnav {  
+        display: grid;
+        grid-template-columns: 0.7fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "desktoplogo desktoplinks";
+        grid-area: desktopnav;
+    }
+
+    .desktoplogo { 
+        grid-area: desktoplogo;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    .desktoplogo img{
+        height: 85%;
+        aspect-ratio: 211/55;
+    }
+
+    .desktoplinks {  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "desktopdinning desktopcal desktophistory desktopcontact desktopboard";
+        grid-area: desktoplinks;
+    }
+
+    .desktopdinning { grid-area: desktopdinning; }
+  
+    .desktopcal { grid-area: desktopcal; }
+    
+    .desktophistory { grid-area: desktophistory; }
+    
+    .desktopcontact { grid-area: desktopcontact; }
+    
+    .desktopboard { grid-area: desktopboard; }
+
+    .desktopquicklinks {  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1.3fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "desktopaccount desktoplogout desktopathletic desktopbooking";
+        grid-area: desktopquicklinks;
+    }
+
+    .desktopaccount { 
+        grid-area: desktopaccount;
+    }
+
+    .desktoplogout { 
+        grid-area: desktoplogout; 
+    }
+
+    .desktopathletic { 
+        grid-area: desktopathletic;
+    }
+
+    .desktopbooking { 
+        grid-area: desktopbooking;
+    }
+
+    .desktopbooking a{
+        color:black;
+        text-decoration: none;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 1px solid rgba(222,174,56,1);
+        border-radius: 20px;
+    }
+
+    .headerlink a{
+        color: black;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+    }
+
+    .headerlink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headerlink a:hover{
+        color: rgba(222,174,56,1);;
+    }
+</style>
+
+<section id="invisHeader">
+    <div class="desktopheader">
+        <div class="desktopnav">
+            <div class="desktoplogo"><a><img src="https://i.ibb.co/f8bTycW/Standard-logo-2017-horizontal-1.jpg" alt="Logo"></a></div>
+            <div class="desktoplinks">
+                <div class="desktopdinning headerlink"><a>DINNING</a></div>
+                <div class="desktopcal headerlink"><a>CALENDAR</a></div>
+                <div class="desktophistory headerlink"><a>HISTORY</a></div>
+                <div class="desktopcontact headerlink"><a>CONTACT</a></div>
+                <div class="desktopboard headerlink"><a>COMMITTEES</a></div>
+            </div>
+        </div>
+        <div class="desktopquicklinks">
+            <div class="desktopaccount headerlink"><a>MY INFO</a></div>
+            <div class="desktoplogout headerlink"><a>LOG OUT</a></div>
+            <div class="desktopathletic headerlink"><a>ATHLETICS</a></div>
+            <div class="desktopbooking headerlink"><a>BOOK NOW</a></div>
+        </div>
+    </div>
+</section>
+  
