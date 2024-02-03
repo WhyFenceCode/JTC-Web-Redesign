@@ -1,12 +1,12 @@
 <style>
-    #tricard-grid-container {
+    #bicard-grid-container {
        height: 30vh;
        width: 100%;
        display: grid;
-       grid-template-columns: repeat(3, 1fr);
+       grid-template-columns: repeat(2, 1fr);
     }
      
-    .tricard-grid-item {
+    .bicard-grid-item {
        color:white;
        background-color: rgb(230, 230, 230);
        display: flex;
@@ -18,12 +18,12 @@
        overflow: hidden;
     }
      
-    .tricard-grid-item h2 {
+    .bicard-grid-item h2 {
        margin: 0;
        z-index: 1;
     }
      
-    .tricard-grid-item img {
+    .bicard-grid-item img {
        display: block;
        position: absolute;
        top: 50%;
@@ -36,26 +36,22 @@
        transition: opacity 0.2s ease-in-out;
     }
      
-    .tricard-grid-item:hover img {
+    .bicard-grid-item:hover img {
        opacity: 0;
     }
 
-    .tricard-grid-item:hover {
+    .bicard-grid-item:hover {
        color:black;
     }
 </style>
 
-<section id="tricard-grid-container">
-    <a class="tricard-grid-item" href="#raqu">
-       <h2>RAQUET REVIEW</h2>
+<section id="bicard-grid-container">
+    <a class="bicard-grid-item" href="#raqu">
+       <h2>RULES & BYLAWS</h2>
        <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6" alt="Image 1">
     </a>
-    <a class="tricard-grid-item" href="#prog">
-       <h2>PROGRAMS</h2>
+    <a class="bicard-grid-item" href="#prog">
+       <h2>BOOKING INFO</h2>
        <img src="https://images.unsplash.com/photo-1601646761285-65bfa67cd7a3" alt="Image 2">
-    </a>
-    <a class="tricard-grid-item" href="#comm">
-       <h2>COMMUNIQUÉ</h2>
-       <img src="https://images.unsplash.com/photo-1558617320-e695f0d420de" alt="Image 3">
     </a>
 </section>
