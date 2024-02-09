@@ -1,0 +1,61 @@
+<style>
+    #tricard2-grid-container {
+       height: 30vh;
+       width: 100%;
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+    }
+     
+    .tricard2-grid-item {
+       color:white;
+       background-color: rgb(230, 230, 230);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+       text-decoration: none;
+       transition: color 0.2s ease-in-out;
+       overflow: hidden;
+    }
+     
+    .tricard2-grid-item h2 {
+       margin: 0;
+       z-index: 1;
+    }
+     
+    .tricard2-grid-item img {
+       display: block;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       height: 100%;
+       width: 100%;
+       object-fit: cover;
+       opacity: 0.9;
+       transition: opacity 0.2s ease-in-out;
+    }
+     
+    .tricard2-grid-item:hover img {
+       opacity: 0;
+    }
+
+    .tricard2-grid-item:hover {
+       color:black;
+    }
+</style>
+
+<section id="tricard2-grid-container">
+    <a class="tricard2-grid-item" href="#raqu">
+       <h2>DUES INFO</h2>
+       <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6" alt="Image 1">
+    </a>
+    <a class="tricard2-grid-item" href="#prog">
+       <h2>FIND A MEMBER</h2>
+       <img src="https://images.unsplash.com/photo-1601646761285-65bfa67cd7a3" alt="Image 2">
+    </a>
+    <a class="tricard2-grid-item" href="#comm">
+       <h2>GENERAL MEETINGS</h2>
+       <img src="https://images.unsplash.com/photo-1558617320-e695f0d420de" alt="Image 3">
+    </a>
+</section>
