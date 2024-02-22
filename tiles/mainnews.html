@@ -1,25 +1,87 @@
 <style>
-    body{
-        margin: 0px;
+    body {
+        margin: 0;
     }
 
-    #mainnews {
+    .news-container {
+        width: 100%;
+        height: 100vh;
+        background-image: url("https://images.unsplash.com/photo-1519611103964-90f61a50d3e6");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .news-item {
+        width: 20%;
+        height: 100%;
+        color: white;
+        transition: width 0.4s, color 0.4s, background-color 0.4s;
+    }
+
+    .news-selected {
+        width: 60%;
+        height: 100%;
+        color: black;
         background-color: rgb(230, 230, 230);
     }
 
-    #mainnews h1 {
-        text-align: center;
+    .news-title {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    #mainnews h3 {
-        text-align: center;
+    .news-text {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .news-text p {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 </style>
-<section id="mainnews">
-    <h1>FEBRUARY 1, 2024</h1>
-    <h3>The Pro Shop will have reduced hours over the next few weeks due to a staff shortage. 
-        Racquet restringing will be available; however, stringing will occur on Monday and Tuesday in the short term.
-        Demo racquets as well as access to LIJA samples will not be available when the shop is
-        closed.
-    </h3>
+<section id="news-container">
+    <div class="news-item news-selected">
+        <div class=news-title><h1>News</h1></div>
+        <div class=news-text>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+        </div>
+    </div>
+    <div class="news-item">
+        <div class=news-title><h1>News</h1></div>
+        <div class=news-text>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+        </div>
+    </div>
+    <div class="news-item">
+        <div class=news-title><h1>News</h1></div>
+        <div class=news-text>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+        </div>
+    </div>
 </section>
+
+<script>
+    const boxes = document.querySelectorAll('.news-item');
+
+    boxes.forEach((box, index) => {
+        box.addEventListener('click', () => {
+            // Remove the 'expanded' class from all boxes
+            boxes.forEach((box) => {
+                box.classList.remove('news-selected');
+            });
+
+            // Add the 'expanded' class to the clicked box
+            box.classList.add('news-selected');
+        });
+    });
+</script>
