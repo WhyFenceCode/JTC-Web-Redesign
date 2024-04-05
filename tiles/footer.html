@@ -1,1 +1,61 @@
-<h1>footer</h1>
+<style>
+    body {
+        margin: 0;
+    }
+
+    #footer {
+        height: 30vh;
+        width: 100%;
+        background-color: #404041;
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 2fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+            "footer-about footer-explore footer-social-legal"
+            "copyright footer-explore footer-social-legal"; 
+    }
+
+    .footer-about { grid-area: footer-about; }
+    .footer-explore { grid-area: footer-explore; }
+    .footer-social-legal { grid-area: footer-social-legal; }
+    .copyright { grid-area: copyright; }
+
+    .footer h1 {
+        color: whitesmoke;
+        font-size: 2em;
+    }
+
+    .footer p {
+        color: whitesmoke;
+        font-size: 1em;
+    }
+</style>
+<section id="footer">
+    <div class="footer-about">
+        <h1>JERICO TENNIS CLUB</h1>
+        <p>For over 100 years, Jericho Tennis Club has built an esteemed reputation as one of Vancouver’s most exclusive, yet welcoming private clubs. From world class tennis and squash to athletics and an unmatched social scene, membership is about being a part of a unique, oceanside community on the spectacular shores of Jericho Beach.</p>
+    </div>
+    <div class="footer-explore">
+        <h1>EXPLORE OUR SITE</h1>
+        <p><a href="#home">Home</a></p>
+        <p><a href="#athl">Athletics</a></p>
+        <p><a href="#din">Dining</a></p>
+        <p><a href="#comm">Commities</a></p>
+    </div>
+    <div class="footer-social-legal">
+        <h1>JOIN US</h1>
+        <p><a href="#news">News</a></p>
+        <p><a href="#insta">Instagram</a></p>
+        <p><a href="#fb">Facebook</a></p>
+        <p><a href="#linkdeb">Linkden</a></p>
+        <p><a href="#contact">Contact Us</a></p>
+        <br/>
+        <p><a href="#pol">Privacy Policy</a></p>
+        <p><a href="#tos">Terms Of Service</a></p>
+    </div>
+    <div class="copyright">
+        <p>© 2023 Jericho Tennis Club. All rights reserved.</p>
+        <p>Website Design and Production by <a href="#whyfe">NAME HERE</a></p>
+    </div>
+</section>
