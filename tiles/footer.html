@@ -3,18 +3,20 @@
         margin: 0;
     }
 
-    #footer {
+    .footer-container {
         height: 50vh;
         width: 100%;
-        background-color: #404041;
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr; 
-        grid-template-rows: 2fr 1fr; 
-        gap: 0px 0px; 
-        grid-template-areas: 
+        background-color: #404041;  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
             "footer-about footer-explore footer-social-legal"
-            "copyright footer-explore footer-social-legal"; 
+            "copyright footer-explore footer-social-legal";
     }
+
 
     .footer-about { 
         grid-area: footer-about; 
@@ -48,7 +50,7 @@
         font-size: 1em;
     }
 </style>
-<section id="footer">
+<section id="footer" class="footer-container">
     <div class="footer-about">
         <h1>JERICO TENNIS CLUB</h1>
         <p>For over 100 years, Jericho Tennis Club has built an esteemed reputation as one of Vancouver’s most exclusive, yet welcoming private clubs. From world class tennis and squash to athletics and an unmatched social scene, membership is about being a part of a unique, oceanside community on the spectacular shores of Jericho Beach.</p>
