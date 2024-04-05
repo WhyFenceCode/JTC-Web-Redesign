@@ -100,17 +100,59 @@ body {
     </div>
     <div class="links">
       <div class="link">
-        <a href="#">Tennis</a>
+        <a href="#tennis">Tennis</a>
       </div>
       <div class="link">
-        <a href="#">Squash</a>
+        <a href="#squash">Squash</a>
       </div>
       <div class="link">
-        <a href="#">Gym</a>
+        <a href="#gym">Gym</a>
       </div>
       <div class="link">
-        <a href="#">Swimming</a>
+        <a href="#swim">Swimming</a>
       </div>
       <div class="link">
     </div>
 </section>
+<script>
+    window.onload = function() {
+    var links = document.getElementsByClassName('link');
+    for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener('mouseover', function() {
+            // Set opacity of all <a> tags to 0.2
+            for (let j = 0; j < links.length; j++) {
+                links[j].getElementsByTagName('a')[0].style.opacity = 0.1;
+            }
+            // Set opacity of hovered <a> tag to 1
+            this.getElementsByTagName('a')[0].style.opacity = 1;
+            this.getElementsByTagName('div')[0].style.height = '100%';
+
+            // Get the position of the link in the array, starting with 1
+            var position = i + 1;
+
+            // Find an item with the id of 'background-' and the number
+            var bgElement = document.getElementById('background-' + position);
+
+            // Add the class of 'show' to it
+            if (bgElement) {
+                bgElement.classList.add('show');
+            }
+        });
+
+        links[i].addEventListener('mouseout', function() {
+            // Reset opacity of all <a> tags to 1 when mouse is not over
+            for (let j = 0; j < links.length; j++) {
+                links[j].getElementsByTagName('a')[0].style.opacity = 0.5;
+              links[j].getElementsByTagName('div')[0].style.height = '0';
+            }
+
+            // Remove the class of 'show' from all background elements
+            var bgElements = document.querySelectorAll('[id^="background-"]');
+            for (let k = 0; k < bgElements.length; k++) {
+                bgElements[k].classList.remove('show');
+            }
+        });
+    }
+};
+
+</script>
