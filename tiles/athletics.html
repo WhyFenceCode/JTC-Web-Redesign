@@ -86,17 +86,17 @@ body {
 <section class="container">
     <div class="backgrounds">
       <video id="background-1" class="background" autoplay loop muted>
-  <source src="../media/videos/8224292-hd_1920_1080_30fps.mp4" type="video/mp4">
-  </video>
+        <source src="../media/videos/8224292-hd_1920_1080_30fps.mp4" type="video/mp4">
+      </video>
       <video id="background-2" class="background" autoplay loop muted>
-  <source src="../media/videos/8052830/8052830-uhd_3840_2160_25fps.mp4" type="video/mp4">
-  </video>
+        <source src="../media/videos/8052830/8052830-uhd_3840_2160_25fps.mp4" type="video/mp4">
+      </video>
       <video id="background-3" class="background" autoplay loop muted>
-  <source src="../media/videos/3195530/3195530-uhd_3840_2160_25fps.mp4" type="video/mp4">
-  </video>
+        <source src="../media/videos/3195530/3195530-uhd_3840_2160_25fps.mp4" type="video/mp4">
+      </video>
       <video id="background-4" class="background" autoplay loop muted>
-  <source src="../media/videos/4525107/4525107-uhd_3840_2160_24fps.mp4" type="video/mp4">
-  </video>
+        <source src="../media/videos/4525107/4525107-uhd_3840_2160_24fps.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="links">
       <div class="link">
@@ -115,6 +115,7 @@ body {
     </div>
 </section>
 <script>
+    window.onload = function() {
     var links = document.getElementsByClassName('link');
     for (let i = 0; i < links.length; i++) {
         links[i].addEventListener('mouseover', function() {
@@ -152,5 +153,6 @@ body {
             }
         });
     }
+};
 
 </script>
