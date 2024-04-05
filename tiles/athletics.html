@@ -115,10 +115,11 @@ body {
     </div>
 </section>
 <script>
-    window.onload = function() {
+  window.onload = function() {
     var links = document.getElementsByClassName('link');
     for (let i = 0; i < links.length; i++) {
         links[i].addEventListener('mouseover', function() {
+          console.log(links[i]);
             // Set opacity of all <a> tags to 0.2
             for (let j = 0; j < links.length; j++) {
                 links[j].getElementsByTagName('a')[0].style.opacity = 0.1;
@@ -153,6 +154,6 @@ body {
             }
         });
     }
-};
+  };
 
 </script>
